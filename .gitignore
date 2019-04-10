@@ -4,4 +4,7 @@
 /_pycache_
 /tensorboard
 /trained_model
-/data/VOCdevkit/VOC2012/ 
+/data/VOCdevkit/VOC2012/
+/VOCdevkit
+/valohai
+ 
