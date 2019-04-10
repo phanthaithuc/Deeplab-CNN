@@ -3,8 +3,8 @@
     command: python train.py {parameters}
     
     inputs:
-      - name: VOCdevkit-2012
-        default: http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
+      - name: data
+        default: swift://f8a5dbc8033343aea820c139245afe13/VOCdevkit/*
                 
     parameters:
 
@@ -20,8 +20,14 @@
       pass-as: --lr {v}
       type: float
       
+    - default: 100
+      description: Number of epoches
+      name: Epoches 
+      pass-as: --num_epoches {v}
+      type: integer
+      
     - default: 4
-      description: Minibatch size, recommend default 128
+      description: Minibatch size,default 4
       name: Minibatch size
       pass-as: --batch_size {v}
       type: integer
@@ -51,9 +57,9 @@
       type: string    
       
       
-    - default: VOCdevkit
+    - default: valohai/inputs/data/VOCdevkit
       description: Path to dataset
-      name: Test set 
+      name: VOCdevkit path 
       pass-as: --data_path {v}
       type: string
       
