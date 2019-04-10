@@ -1,0 +1,75 @@
+- step:
+    image: phanthaithuc/pytorch:PIL
+    command: python train.py {parameters}
+    
+    inputs:
+      - name: VOCdevkit-2012
+        default: http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
+                
+    parameters:
+
+    - default: 5e-4
+      description: Decay value
+      name: Decay
+      pass-as: --decay {v}
+      type: float
+      
+    - default: 2.5e-4
+      description: Initial learning rate
+      name: Learning rate
+      pass-as: --lr {v}
+      type: float
+      
+    - default: 4
+      description: Minibatch size, recommend default 128
+      name: Minibatch size
+      pass-as: --batch_size {v}
+      type: integer
+      
+    - default: 3
+      description: Early stopping's parameter, set 0 to disable
+      name: Early stopping
+      pass-as: --es_patience {v}
+      type: integer
+      
+    - default: 0.5
+      description: Drop out value
+      name: Drop out
+      pass-as: --dropout {v}
+      type: float
+      
+    - default: 0.9
+      description: Momentum, recommend default "0.9"
+      name: Momentum
+      pass-as: --momentum {v}
+      type: float
+      
+    - default: voc2012
+      description: Dataset to train
+      name: Dataset
+      pass-as: --dataset {v} 
+      type: string    
+      
+      
+    - default: VOCdevkit
+      description: Path to dataset
+      name: Test set 
+      pass-as: --data_path {v}
+      type: string
+      
+    - default: /valohai/outputs/trained-model
+      description: Path to save Trained Model
+      name: Output Trained Model 
+      pass-as: --saved_path {v}
+      type: string
+      
+    - default: /valohai/outputs/log
+      description: Path to save log
+      name: Log path
+      pass-as: --log_path {v}
+      type: string
+      
+    
+    
+    name: Train model
+
