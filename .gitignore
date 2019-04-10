@@ -1,0 +1,7 @@
+.DS_STORE 
+.ds_store
+/VOC2012
+/_pycache_
+/tensorboard
+/trained_model
+/data/VOCdevkit/VOC2012/ 
