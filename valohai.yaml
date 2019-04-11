@@ -4,20 +4,9 @@
     
     inputs:
       - name: data/VOCdevkit/VOC2012/ImageSets/Segmentation
-        default: swift://f8a5dbc8033343aea820c139245afe13/VOCdevkit/VOC2012/ImageSets/Segmentation/*.
+        default: swift://f8a5dbc8033343aea820c139245afe13/VOCdevkit/VOC2012.tar
         
-      - name: data/VOCdevkit/VOC2012/ImageSets/Layout
-        default: swift://f8a5dbc8033343aea820c139245afe13/VOCdevkit/VOC2012/ImageSets/Layout/*.
-        
-      - name: data/VOCdevkit/VOC2012/Annotations
-        default: swift://f8a5dbc8033343aea820c139245afe13/VOCdevkit/VOC2012/Annotations/*.
-        
-      - name: data/VOCdevkit/VOC2012/JPEGImages
-        default: swift://f8a5dbc8033343aea820c139245afe13/VOCdevkit/VOC2012/JPEGImages/*.
-        
-      - name: data/VOCdevkit/VOC2012/SegmentationClass
-        default: swift://f8a5dbc8033343aea820c139245afe13/VOCdevkit/VOC2012/SegmentationClass/*.
-        
+    
     parameters:
 
     - default: 5e-4
@@ -69,7 +58,7 @@
       type: string    
       
       
-    - default: valohai/inputs/data/VOCdevkit
+    - default: valohai/tmp/VOCdevkit
       description: Path to dataset
       name: VOCdevkit path 
       pass-as: --data_path {v}
