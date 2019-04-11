@@ -3,7 +3,7 @@
     command: python train.py {parameters}
     
     inputs:
-      - name: data/VOCdevkit/VOC2012/ImageSets/Segmentation
+      - name: data
         default: swift://f8a5dbc8033343aea820c139245afe13/VOCdevkit/VOC2012.tar
         
     
