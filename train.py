@@ -63,7 +63,7 @@ def train(opt):
     log_path = os.path.join(opt.log_path, "{}".format(opt.dataset))
     if os.path.isdir(log_path):
         shutil.rmtree(log_path)
-    os.makedirs(log_path)
+#os.makedirs(log_path)
     writer = SummaryWriter(log_path)
     writer.add_graph(model, torch.rand(opt.batch_size, 3, opt.image_size, opt.image_size))
     if torch.cuda.is_available():
