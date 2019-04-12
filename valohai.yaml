@@ -1,6 +1,14 @@
 - step:
     image: phanthaithuc/pytorch:PIL
-    command: python train.py {parameters}
+    command:
+        - pip install Pillow
+        - conda install -c conda-forge tensorboardX
+        - conda install -c conda-forge tensorboard
+        - conda install -c menpo opencv3
+        - apt-get update
+        - apt-get install -y libgtk2.0-dev
+        - tar -xf /valohai/inputs/VOC2012.tar -C /tmp  
+        - python train.py {parameters}
     
     inputs:
       - name: data
@@ -58,13 +66,13 @@
       type: string    
       
       
-    - default: valohai/tmp/VOCdevkit
+    - default: tmp/VOCdevkit
       description: Path to dataset
       name: VOCdevkit path 
       pass-as: --data_path {v}
       type: string
       
-    - default: /valohai/outputs/trained-model
+    - default: /valohai/outputs
       description: Path to save Trained Model
       name: Output Trained Model 
       pass-as: --saved_path {v}
