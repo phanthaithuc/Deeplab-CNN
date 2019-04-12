@@ -1,5 +1,5 @@
 - step:
-    image: phanthaithuc/pytorch:PIL
+    image: pytorch/pytorch:latest
     command:
         - pip install Pillow
         - conda install -c conda-forge tensorboardX
@@ -60,26 +60,26 @@
       type: float
       
     - default: voc2012
-      description: Dataset to train
+      description: Choose dataset to train ( COCO or VOC )
       name: Dataset
       pass-as: --dataset {v} 
       type: string    
       
       
     - default: tmp/VOCdevkit
-      description: Path to dataset
+      description: Input Path to dataset
       name: VOCdevkit path 
       pass-as: --data_path {v}
       type: string
       
     - default: /valohai/outputs
-      description: Path to save Trained Model
+      description: Output Path to save Trained Model
       name: Output Trained Model 
       pass-as: --saved_path {v}
       type: string
       
     - default: /valohai/outputs/log
-      description: Path to save log
+      description: Output Path to save log
       name: Log path
       pass-as: --log_path {v}
       type: string
