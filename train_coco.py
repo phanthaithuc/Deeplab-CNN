@@ -29,7 +29,6 @@ def get_args():
     parser.add_argument("--dataset", type=str, default="stuff2017", choices=["stuff2017"],
                         help="The dataset used")
     parser.add_argument("--data_path", type=str, default="data/COCO", help="the root folder of dataset")
-    parser.add_argument("--pre_trained_model", type=str, default="trained_models/vietnh_trained_deeplab_coco")
     parser.add_argument("--log_path", type=str, default="tensorboard")
     parser.add_argument("--saved_path", type=str, default="trained_models")
 
@@ -60,11 +59,11 @@ def train(opt):
     test_generator = DataLoader(test_set, **test_params)
 
     model = Deeplab(num_classes=training_set.num_classes + 1)
-    model.load_state_dict(torch.load(opt.pre_trained_model))
+#model.load_state_dict(torch.load(opt.pre_trained_model))
     log_path = os.path.join(opt.log_path, "{}".format(opt.dataset))
     if os.path.isdir(log_path):
         shutil.rmtree(log_path)
-    os.makedirs(log_path)
+#os.makedirs(log_path)
     writer = SummaryWriter(log_path)
     writer.add_graph(model, torch.rand(opt.batch_size, 3, opt.image_size, opt.image_size))
     if torch.cuda.is_available():

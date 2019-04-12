@@ -7,4 +7,6 @@
 /data/VOCdevkit/VOC2012/
 /VOCdevkit
 /valohai
+train_coco.py
+test_voc.py
  

@@ -15,15 +15,15 @@ class VOCDataset(Dataset):
         if self.dataset == "voc2007":
             self.data_path = os.path.join(root_path, "VOC2007")
             if is_training:
-                id_list_path = os.path.join(self.data_path, "ImageSets/Segmentation/trainval.txt")
+                id_list_path = os.path.join(self.data_path, "trainval.txt")
             else:
-                id_list_path = os.path.join(self.data_path, "ImageSets/Segmentation/test.txt")
+                id_list_path = os.path.join(self.data_path, "test.txt")
         elif self.dataset == "voc2012":
             self.data_path = os.path.join(root_path, "VOC2012")
             if is_training:
-                id_list_path = os.path.join(self.data_path, "ImageSets/Segmentation/train.txt")
+                id_list_path = os.path.join(self.data_path, "train.txt")
             else:
-                id_list_path = os.path.join(self.data_path, "ImageSets/Segmentation/val.txt")
+                id_list_path = os.path.join(self.data_path, "val.txt")
         elif self.dataset == "augmentedvoc":
             self.data_path = os.path.join(root_path, "VOCaugmented")
             if is_training:
