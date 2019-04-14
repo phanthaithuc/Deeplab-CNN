@@ -7,6 +7,7 @@
         - conda install -c menpo opencv3
         - apt-get update
         - apt-get install -y libgtk2.0-dev
+        -
         - tar -xf /valohai/inputs/data/VOC2012.tar -C /tmp
         - python train.py {parameters}
     
@@ -97,6 +98,7 @@
         - conda install -c menpo opencv3
         - apt-get update
         - apt-get install -y libgtk2.0-dev
+        -
         - tar -xzf /valohai/inputs/data/COCO-stuff.tar.gz -C /tmp
         - python train_coco.py {parameters}
     
