@@ -34,10 +34,10 @@ class VOCDataset(Dataset):
         self.classes = ['aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus', 'car', 'cat', 'chair', 'cow',
                         'diningtable', 'dog', 'horse', 'motorbike', 'person', 'pottedplant', 'sheep', 'sofa', 'train',
                         'tvmonitor']
-                        self.image_size = image_size
-                        self.num_classes = len(self.classes)
-                        self.num_images = len(self.ids)
-                        self.is_training = is_training
+        self.image_size = image_size
+        self.num_classes = len(self.classes)
+        self.num_images = len(self.ids)
+        self.is_training = is_training
 
 def __len__(self):
     return self.num_images
