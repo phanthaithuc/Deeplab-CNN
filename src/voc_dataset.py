@@ -31,8 +31,7 @@ class VOCDataset(Dataset):
                 id_list_path = os.path.join(self.data_path, "list/val.txt")
         
         self.ids = [id.strip() for id in open(id_list_path)]
-        self.classes = ['aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus', 'car', 'cat', 'chair', 'cow',
-                        'diningtable', 'dog', 'horse', 'motorbike', 'person', 'pottedplant', 'sheep', 'sofa', 'train',
+        self.classes = ['aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus', 'car', 'cat', 'chair', 'cow','diningtable', 'dog', 'horse', 'motorbike', 'person', 'pottedplant', 'sheep', 'sofa', 'train',
                         'tvmonitor']
         self.image_size = image_size
         self.num_classes = len(self.classes)
