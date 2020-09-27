@@ -19,7 +19,10 @@ I used 2 different datases: VOC2012 and VOCaugmented (VOC2007 + 2012) Statistics
 
 ## Training
 
-Using Valohai platform 
+* Using Valohai platform
+* Valohai platform overview
+![graph](/results/valohai_g.png)
+
 
 ## Experiments:
 
